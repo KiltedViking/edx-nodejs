@@ -11,24 +11,23 @@ const fs = require("fs");
 const csvFileName = "customer-data.csv";
 const jsonFileName = "customer-data.json";
 
-//Read data from file
-var fileData = fs.readFileSync(csvFileName, "utf-8");
-//Convert data to array of lines
-var lines = fileData.split("\r\n");
-//Remove first line with headings
-var properties = lines.shift().split(",");
-var lineObjects = [];
+var fileData = fs.readFileSync(csvFileName, "utf-8"); //Read CSV file
+var lines = fileData.split("\r\n");         //Convert data to array of lines
+var properties = lines.shift().split(",");  //Remove first line with headings
+var lineObjects = [];                       //Init. array to store objects in
 
+//For each line in file...
 for(var i = 0; i < lines.length; i++) {
-  let lineArray = lines[i].split(",");
-  let lineObject = {};
+  let lineArray = lines[i].split(",");      //Convert line to array
+  let lineObject = {};                      //Initialise object
 
+  //For each heading in file...
   for(var j = 0; j < properties.length; j++ ) {
-    lineObject[properties[j]] = lineArray[j];
+    lineObject[properties[j]] = lineArray[j]; //... add property w value from current line
   }
   
-  lineObjects.push(lineObject);
+  lineObjects.push(lineObject);             //Add object to array
 }
 
-var jsonData = JSON.stringify(lineObjects);
-fs.writeFileSync(jsonFileName, jsonData);
+var jsonData = JSON.stringify(lineObjects); //Convert array of objects to JSON
+fs.writeFileSync(jsonFileName, jsonData);   //Save to JSON file
