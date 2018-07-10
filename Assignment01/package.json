@@ -1,0 +1,14 @@
+{
+  "name": "Assignment01",
+  "version": "0.1.0",
+  "description": "Solution to assignment 1 on Microsoft's edX course Introduction to Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bj�rn G. D. Persson <bjorn@kiltedviking.net> (https://www.kiltedviking.net/)",
+  "license": "ISC",
+  "homepage": "https://github.com/KiltedViking/edX-nodejs"
+}
