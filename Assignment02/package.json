@@ -1,0 +1,19 @@
+{
+  "name": "Assignment02",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node-dev server.js"
+  },
+  "keywords": [],
+  "author": "Bj�rn G. D. Persson <bjorn@kiltedviking.net> (https://www.kiltedviking.net/)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "node-dev": "^3.1.3"
+  }
+}
